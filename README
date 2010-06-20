@@ -1,13 +1,14 @@
-ZFKit - Zend Framework Starter Kit
-==================================
+twilioKit - Twilio Starter Kit for Zend Framework
+==================================================
 Original code - copyright (c)2010 Michael Kimsal
 All other code copyright by the respective projects
 
-ZFKit provides a basic skeleton for bringing 
-together doctrine, phpunit and Zend Framework in one 
-'ready to go' set up.
+twilioKit provides a basic skeleton for bringing 
+together a Twilio library, Doctrine, phpunit and Zend Framework 
+in one 'ready to go' set up with example code for Twilio services.
 
 Doctrine 1.2 and ZF 1.10.5 are provided in the /library folder, 
+Twilio REST Client adapted from twilio.com helper library.
 
 
 Getting started
@@ -64,4 +65,4 @@ http://<your_host_name_here>/
 
 License
 =======
-ZFKit is released under a BSD license.
+twilioKit is released under a BSD license and is based on ZFKit.
