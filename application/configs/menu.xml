@@ -16,5 +16,23 @@
 			<controller>index</controller>
 			<action>contact</action>
 		</contact>
+		<twiliocall>
+			<label>Twilio call demo</label>
+			<controller>demo</controller>
+			<action>index</action>
+		</twiliocall>
+		<twiliosms>
+			<label>Twilio send SMS</label>
+			<controller>sms</controller>
+			<action>index</action>
+		</twiliosms>
+		<twiliorecord>
+			<label>Twilio record message</label>
+			<controller>record</controller>
+			<action>index</action>
+		</twiliorecord>
+
+
+
 	</nav>
 </config>
