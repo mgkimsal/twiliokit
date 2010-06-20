@@ -1,0 +1,17 @@
+<h2>Twilio demo SMS</h2>
+<p>
+Sending SMS message to... <i><?=$this->out;?></i>
+</p>
+<p>
+Message sent was <i><?=$this->message;?></i>
+</p>
+<hr/>
+<p>
+Data dump...
+</p>
+<div style='height:300px; width: 600px; border: thin solid blue; overflow:auto;'>
+<pre>
+<? Zend_Debug::dump($this->dump);?>
+</pre>
+</div>
+
