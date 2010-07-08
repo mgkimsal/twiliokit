@@ -36,6 +36,23 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		return $view;
 	} 
 
+	public function _initBase()
+	{
+// need a better way - $_SERVER data isn't available in phpunit mode - config vars?
+//              Zend_Registry::set("baseUrl","http://".$_SERVER['HTTP_HOST'].Zend_Controller_Front::getInstance()->getBaseUrl());
+					Zend_Registry::set("baseUrl","http://zfkit.com/twilio/public".Zend_Controller_Front::getInstance()->getBaseUrl());
+	}
+
+	public function _initTwilio()
+	{
+					$config = $this->getOption("twilio");
+					Zend_Registry::set("twilioBaseUrl", $config['endpoint']."/Accounts/".$config['accountSid']);
+					Zend_Registry::set("twilioConfig", $config);
+					$w = new Zend_Log_Writer_Stream($config['outlog']);
+					$log = new Zend_Log($w);
+					Zend_Registry::set("twiliolog", $log);
+	}
+	
 /**
  * if you want true zend-framework 'rest'-style URLs
  * with all that entails, uncomment this method
